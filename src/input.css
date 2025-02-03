@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@theme {
+    --animate-animate: animate 4s steps(12) infinite;
+    @keyframes animate {
+        40%, 60% {
+            left: 100%;
+        }
+        100% {
+            left: 0%;
+        }
+    }
+}
+
+.darkmode {
+    /* background-color: rgb(43, 43, 43); */
+    background-color: black;
+    color: white;
+}
+
+.lightmode {
+    background-color: white;
+    color: black;
+}
+
+.container {
+    width: 100%;
+    padding-right: 70px;
+    padding-left: 70px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (width < 769px) {
+    .container {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+} 
+
+header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media (min-width: 140px) and (max-width: 990px) {
+    main {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 140px) {
+    main {
+        margin-top: 50px;
+    }
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+section > h1 {
+    margin: 50px 0;
+    text-transform: capitalize;
+}
+
+#ham-button.open {
+    transform: rotate(720deg);
+}
+
+#ham-button.open span:nth-child(1) {
+    top: 50%;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+#ham-button.open span:nth-child(2) {
+    opacity: 0;
+}
+
+#ham-button.open span:nth-child(3) {
+    bottom: 50%;
+    transform: translate(0, 50%) rotate(-45deg);
+}
+
+#nav li {
+    margin-left: 35px;
+    position: relative;
+    font-size: 20px;
+}
+
+.active {
+    color: #a800a8;
+}
+
+#mobile-menu {
+    margin-top: 25px;
+}
+
+#mobile-menu li {
+    padding: 24px 0;
+    margin: 5px auto;
+}
+
+@media ((width >= 40rem) and (width < 990px)) {
+    #text { margin-top: 20px; }
+    #text p:nth-child(2) { margin: 10px 0 20px; }
+}
+
+@media (width >= 990px) {
+    #text p:nth-child(2) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    #text p:nth-child(2) {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+#text button {
+    padding: 15px 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#img {
+    margin-top: 50px;
+}
+
+#img img {
+    margin-bottom: 50px;
+}
+
+@media (width < 990px) {
+    #img img { margin: auto; }
+}
+
+.who-am-i {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.who-am-i > div {
+    margin-bottom: 10px;
+}
+
+#btn-resume {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    margin-top: 20px;
+}
+
+#prog-holder {
+    margin-bottom: 40px;
+}
+
+#prog-holder h4 {
+    margin-bottom: 15px;
+}
+
+#prog-holder span::before {
+    padding: 4px;
+}
+
+.card {
+    padding: 30px;
+}
+
+.card img {
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 30px;
+}
+
+.card button {
+    margin-top: 20px;
+    padding: 13px 25px;
+}
+
+#col-left {
+    margin-right: 30px;
+}
+
+#col-left h4 {
+    margin-bottom: 10px;
+}
+
+#col-left > p {
+    margin-bottom: 20px;
+}
+
+#col-left .row {
+    padding: 5px;
+}
+
+#col-left .infos {
+    margin-left: 30px;
+}
+
+#col-left .infos h5 {
+    margin-bottom: 3px;
+}
+
+#col-right > h4 {
+    margin-bottom: 10px;
+}
+
+#col-right input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#col-right textarea {
+    padding: 10px;
+}
+
+#col-right button {
+    margin-top: 10px;
+    padding: 8px 15px;
+}
+
+#contact {
+    margin-bottom: 50px;
+}

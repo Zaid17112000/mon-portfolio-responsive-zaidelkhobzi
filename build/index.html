@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="darkmode">
+    <header class="fixed top-0 left-0 w-full z-100 bg-white shadow-[0_10px_10px_rgba(0,_0,_0,_0.08)] transition-all duration-[500ms] ease-in-out">
+        <div id="nav" class="container flex justify-between items-center">
+            <a href="#hero"><h1 class="text-3xl text-[#a800a8] font-[600] cursor-pointer">CoderMastery</h1></a>
+            <nav class="relative h-full text-xl text-center hidden md:block">
+                <ul id="main-nav" class="flex">
+                    <a href="#hero" class="scroll-mt"><li class="active dark:text-black hover:text-[#a800a8] cursor- text-right">Home</li></a>
+                    <a href="#about"><li class="dark:text-black hover:text-[#a800a8] cursor-pointer text-right">About</li></a>
+                    <a href="#projects"><li class="dark:text-black hover:text-[#a800a8] cursor-pointer">Projects</li></a>
+                    <a href="#contact"><li class="dark:text-black hover:text-[#a800a8] cursor-pointer text-right">Contact</li></a>
+                    <li>
+                        <!-- Dark Theme Toggle  -->
+                        <button id="darkmode" class="w-[30px] h-[30px] cursor-pointer bg-white text-black border border-solid border-[rgb(43,_43,_43)] rounded-[50%]"><i class="fas fa-moon"></i></button>
+                    </li>
+                </ul>
+            </nav>
+            <button id="ham-button" class="w-[35px] h-[25px] relative cursor-pointer group md:hidden transition-all duration-700 ease-in-out" type="button" aria-label="open-menu">
+                <span class="block w-full h-[5px] bg-black absolute top-0 rounded-xl"></span>
+                <span class="block w-[50%] h-[5px] bg-black absolute top-[50%] rounded-xl transform translate-y-[-50%] duration-200 ease-in-out group-hover:w-full"></span>
+                <span class="block w-full h-[5px] bg-black absolute bottom-0 rounded-xl"></span>
+            </button>
+        </div>
+        <div id="mobile-menu" class="relative w-full max-w-4xl h-screen flex-col justify-center hidden">
+            <nav id="mobile-nav" class="min-h-full absolute left-[50%] transform translate-x-[-50%] top-0" aria-label="mobile">
+                <ul class="text-3xl text-center flex flex-col items-center justify-center">
+                    <a href="#hero"><li class="active dark:text-black hover:text-[#a800a8] cursor- text-right">Home</li></a>
+                    <a href="#about"><li class="dark:text-black hover:text-[#a800a8] cursor-pointer text-right">About</li></a>
+                    <a href="#projects"><li class="dark:text-black hover:text-[#a800a8] cursor-pointer">Projects</li></a>
+                    <a href="#contact"><li class="dark:text-black hover:text-[#a800a8] cursor-pointer text-right">Contact</li></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative">
+        <section id="hero" class="container flex justify-between items-center max-[990px]:flex-col-reverse">
+            <div id="text" class="text-center min-[990px]:text-left min-[990px]:w-[50%] sm:max-[990px]:w-[100%] sm:max-[990px]:text-center">
+                <p class="text-[38px] font-[600] w-[100%]">
+                    <span class="text-[#a800a8] text-[22px] font-medium">HELLO I'M</span>
+                    <br>
+                    ZAID EL KHOBZI
+                </p>
+                <p class="w-[100%]">
+                    Hi, I'm Zaid El Khobzi, a passionate software developer specializing in full-stack web development using JavaScript, React, and Node.js.
+                </p>
+                <button class="bg-[#a800a8] border-none rounded-[30px] text-white text-[16px] capitalize font-medium cursor-pointer transition-all duration-500 ease-in-out hover:text-[#a800a8] hover:bg-white">view my work</button>
+            </div>
+            <div id="img" class="relative">
+                <img src="./imgs/hero.png" class="h-auto z-10 w-[350px] max-[990px]:w-[100px] relative block">
+                <div class="border-[18px] border-[#a800a8] border-solid h-[400px] absolute top-[68px] w-[107%] z-1 hidden min-[990px]:block"></div>
+            </div>
+        </section>
+
+        <section id="about" class="relative">
+            <h1 class="text-center text-[32px] font-[600]">about me</h1>
+            <div class="container md:grid md:grid-cols-[repeat(2,_1fr)] md:gap-x-[50px]">
+                <div class="who-am-i">
+                    <div class="overflow-hidden mb-[10px]">
+                        <span class="relative text-[22px] font-[600] mb-[20px]">I'm <span class="text-[#a800a8]">Zaid El Khobzi</span> and I'm </span>
+                        <span id="second-text" class="relative text-[22px] font-[600] mb-[20px] text-red-600 before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-black before:animate-animate"></span>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, error? Necessitatibus mollitia officiis eum odio corporis quia, a, repellendus dicta modi, amet aliquam architecto tempore officia. Magnam soluta odio harum aperiam unde accusantium veniam. Voluptatem atque maiores repudiandae perferendis impedit aliquid repellendus, vel blanditiis minus nobis ex exercitationem eos quidem ad doloribus ut enim.
+                    </p>
+                    <button id="btn-resume" class="mt-[20px] inline-block bg-red-500 text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:rotate-12 hover:bg-[rgb(191,_16,_51)] capitalize cursor-pointer">download resume</button>
+                </div>
+                <div>
+                    <div id="prog-holder">
+                        <h4 class="font-normal uppercase">Html</h4>
+                        <div class="h-[10px] bg-[rgba(187,_23,_23,_0.1)]">
+                            <span class="w-[90%] block bg-[#a800a8] h-full relative before:content-[attr(data-progress)] before:absolute before:bg-black before:text-white before:top-[-40px] before:right-[-18px] before:text-center before:rounded-[4px] after:absolute after:border-solid after:border-[8px] after:border-t-black after:border-r-transparent after:border-l-transparent after:border-b-transparent after:right-[-8px] after:top-[-8px]" data-progress="90%"></span>
+                        </div>
+                    </div>
+                    <div id="prog-holder">
+                        <h4 class="font-normal uppercase">css</h4>
+                        <div class="h-[10px] bg-[rgba(187,_23,_23,_0.1)]">
+                            <span class="w-[90%] block bg-[#a800a8] h-full relative before:content-[attr(data-progress)] before:absolute before:bg-black before:text-white before:top-[-40px] before:right-[-18px] before:text-center before:rounded-[4px] after:absolute after:border-solid after:border-[8px] after:border-t-black after:border-r-transparent after:border-l-transparent after:border-b-transparent after:right-[-8px] after:top-[-8px]" data-progress="90%"></span>
+                        </div>
+                    </div>
+                    <div id="prog-holder">
+                        <h4 class="font-normal uppercase">javascript</h4>
+                        <div class="h-[10px] bg-[rgba(187,_23,_23,_0.1)]">
+                            <span class="w-[80%] block bg-[#a800a8] h-full relative before:content-[attr(data-progress)] before:absolute before:bg-black before:text-white before:top-[-40px] before:right-[-18px] before:text-center before:rounded-[4px] after:absolute after:border-solid after:border-[8px] after:border-t-black after:border-r-transparent after:border-l-transparent after:border-b-transparent after:right-[-8px] after:top-[-8px]" data-progress="80%"></span>
+                        </div>
+                    </div>
+                    <div id="prog-holder">
+                        <h4 class="font-normal uppercase">tailwind</h4>
+                        <div class="h-[10px] bg-[rgba(187,_23,_23,_0.1)]">
+                            <span class="w-[70%] block bg-[#a800a8] h-full relative before:content-[attr(data-progress)] before:absolute before:bg-black before:text-white before:top-[-40px] before:right-[-18px] before:text-center before:rounded-[4px] after:absolute after:border-solid after:border-[8px] after:border-t-black after:border-r-transparent after:border-l-transparent after:border-b-transparent after:right-[-8px] after:top-[-8px]" data-progress="70%"></span>
+                        </div>
+                    </div>
+                    <div id="prog-holder">
+                        <h4 class="font-normal uppercase">node js</h4>
+                        <div class="h-[10px] bg-[rgba(187,_23,_23,_0.1)]">
+                            <span class="w-[50%] block bg-[#a800a8] h-full relative before:content-[attr(data-progress)] before:absolute before:bg-black before:text-white before:top-[-40px] before:right-[-18px] before:text-center before:rounded-[4px] after:absolute after:border-solid after:border-[8px] after:border-t-black after:border-r-transparent after:border-l-transparent after:border-b-transparent after:right-[-8px] after:top-[-8px]" data-progress="50%"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h1 class="text-center text-[32px] font-[600]">my projects</h1>
+            <div class="container">
+                <div class="grid grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] justify-center justify-items-center gap-[10px]">
+                    <div class="card w-[100%] rounded-[10px] bg-[#222] text-white text-center grid grid-rows-subgrid row-span-4 justify-items-center">
+                        <img src="./imgs/lorem.jpeg" alt="lorem" class="w-[100px] h-[100px] rounded-[50%]">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="inline-block border-[2px] border-solid border-[#a800a8] bg-[#222] text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] cursor-pointer">View Project</button>
+                    </div>
+                    <div class="card w-[100%] rounded-[10px] bg-[#222] text-white text-center grid grid-rows-subgrid row-span-4 justify-items-center">
+                        <img src="./imgs/lorem.jpeg" alt="lorem" class="w-[100px] h-[100px] rounded-[50%]">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="inline-block border-[2px] border-solid border-[#a800a8] bg-[#222] text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] cursor-pointer">View Project</button>
+                    </div>
+                    <div class="card w-[100%] rounded-[10px] bg-[#222] text-white text-center grid grid-rows-subgrid row-span-4 justify-items-center">
+                        <img src="./imgs/lorem.jpeg" alt="lorem" class="w-[100px] h-[100px] rounded-[50%]">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="inline-block border-[2px] border-solid border-[#a800a8] bg-[#222] text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] cursor-pointer">View Project</button>
+                    </div>
+                    <div class="card w-[100%] rounded-[10px] bg-[#222] text-white text-center grid grid-rows-subgrid row-span-4 justify-items-center">
+                        <img src="./imgs/lorem.jpeg" alt="lorem" class="w-[100px] h-[100px] rounded-[50%]">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="inline-block border-[2px] border-solid border-[#a800a8] bg-[#222] text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] cursor-pointer">View Project</button>
+                    </div>
+                    <div class="card w-[100%] rounded-[10px] bg-[#222] text-white text-center grid grid-rows-subgrid row-span-4 justify-items-center">
+                        <img src="./imgs/lorem.jpeg" alt="lorem" class="w-[100px] h-[100px] rounded-[50%]">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="inline-block border-[2px] border-solid border-[#a800a8] bg-[#222] text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] cursor-pointer">View Project</button>
+                    </div>
+                    <div class="card w-[100%] rounded-[10px] bg-[#222] text-white text-center grid grid-rows-subgrid row-span-4 justify-items-center">
+                        <img src="./imgs/lorem.jpeg" alt="lorem" class="w-[100px] h-[100px] rounded-[50%]">
+                        <h2>Lorem, ipsum.</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                        <button class="inline-block border-[2px] border-solid border-[#a800a8] bg-[#222] text-white text-[17px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] cursor-pointer">View Project</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1 class="text-center text-[32px] font-[600]">Contact</h1>
+            <div class="container flex md:flex-row flex-col">
+                <div id="col-left" class="w-[100%] md:w-[50%]">
+                    <h4 class="font-[600]">Get in Touch</h4>
+                    <p class="text-[12px] text-justify w-[100%]">If you are interested in working together? Please fill out the form aside with some info about your project and I will get back to you as soon as I can. Please allow a couple days for me to respond.</p>
+                    <div class="row flex items-center h-[65px]">
+                        <i class="fas fa-user text-[25px] w-[20px] text-[#a800a8]"></i>
+                        <div class="infos">
+                            <h5 class="font-medium">Name</h5>
+                            <p class="text-[12px]">Zaid El Khobzi</p>
+                        </div>
+                    </div>
+                    <div class="row flex items-center h-[65px]">
+                        <i class="fas fa-map-marker-alt text-[25px] w-[20px] text-[#a800a8]"></i>
+                        <div class="infos">
+                            <h5 class="font-medium">Address</h5>
+                            <p class="text-[12px]">Asilah, Rue Oualili N 06</p>
+                        </div>
+                    </div>
+                    <div class="row flex items-center h-[65px]">
+                        <i class="fas fa-envelope text-[25px] w-[20px] text-[#a800a8]"></i>
+                        <div class="infos">
+                            <h5 class="font-medium">Email</h5>
+                            <p class="text-[12px]">zaydds2020@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="row flex items-center h-[65px]">
+                        <i class="fa-solid fa-phone text-[25px] w-[20px] text-[#a800a8]"></i>
+                        <div class="infos">
+                            <h5 class="font-medium">Phone</h5>
+                            <p class="text-[12px]">0614399750</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="col-right" class="flex-1 w-full">
+                    <h4 class="font-[600]">Message Me</h4>
+                    <form action="">
+                        <input type="text" class="dark:text-white border-solid border w-full rounded-[6px] focus:outline-none" placeholder="Name">
+                        <br>
+                        <input type="text" class="dark:text-white border-solid border w-full rounded-[6px] focus:outline-none" placeholder="Email">
+                        <br>
+                        <input type="text" class="dark:text-white border-solid border w-full rounded-[6px] focus:outline-none" placeholder="Subject">
+                        <br>
+                        <textarea class="dark:text-white border-solid border rounded-[6px] w-full h-[150px] focus:outline-none" placeholder="Message..."></textarea>
+                        <button id="btn-contact" class="inline-block border-solid border border-[#a800a8] bg-white dark:bg-black text-[#a800a8] text-[15px] font-medium rounded-[6px] transition-all duration-300 ease-in-out hover:bg-[#a800a8] hover:text-white cursor-pointer">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
